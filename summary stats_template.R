@@ -3,8 +3,8 @@ library(readxl)
 library(tidyverse)
 library(broom)
 library(ggplot2)
-all_redox_data_toms_paper <- read_excel("Toms Data/all_redox_data_toms paper.xlsx")
-clean_df <- all_redox_data_toms_paper %>%
+all_redox_data <- read_excel("Data/all_redox_data.xlsx")
+clean_df <- all_redox_data %>%
   filter(gt%in% c(0,2) & tissue == "Liver") %>%
   select(sex,age,gt,tissue,gsh) %>%
   mutate(sex = factor(sex, levels = c(0,1), labels = c("Male", "Female"), ordered = T),
@@ -22,7 +22,7 @@ clean_df <- clean_df %>%
 ungroup()
 
 
-write.csv(clean_df, "C:\\Users\\JoeDe\\OneDrive\\Documents\\Toms Data\\summary stats_liver_gsh.csv")
+write.csv(clean_df, "C:\\Documents\\Data\\summary stats_liver_gsh.csv")
  
   
   

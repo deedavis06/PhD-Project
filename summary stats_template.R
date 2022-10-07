@@ -1,4 +1,5 @@
-
+#Running summary statistics (mean, standard error and sample size) for glutathione levels in the liver
+#Filter data by genotype (excluding heterozygous) and tissue (only liver tissue)
 library(readxl)
 library(tidyverse)
 library(broom)

@@ -1,3 +1,4 @@
+#running 3-way ANOVAs using sex, age and genotype as independent variables for glutathione levels in the liver
 library(readxl)
 library(tidyverse)
 library(broom)
